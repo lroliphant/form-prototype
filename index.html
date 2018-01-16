@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>contact form</title>
+    <link rel="stylesheet" href=".scss">
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Contact us</h2>
+      <form class="contact-form" action="index.html" method="post">
+        <fieldset name="details">
+          <label for="first-name">First name</label>
+          <input placeholder="first name" id="first-name" type="text" required autofocus>
+          <label for="last-name">Last name</label>
+          <input placeholder="last name" id="last-name" type="text" required>
+          <label for="email-address">Email</label>
+          <input placeholder="email" id="email-address" type="email" required>
+          <label for="email-address2">Confirm</label>
+          <input placeholder="confirm email" id="email-address2" type="email" required>
+        </fieldset>
+        <fieldset>
+          <textarea placeholder="Type your Message Here...." required></textarea>
+        </fieldset>
+        <button type="submit" >Submit</button>
+      </form>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
