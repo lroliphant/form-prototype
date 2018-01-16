@@ -1,35 +1,33 @@
-import ExtractTextPlugin from "extract-text-webpack-plugin";
-
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
-var DIST_DIR = path.join(__dirname, "dist"),
-SRC_DIR = path.join(__dirname, "src");
+var webpack = require('webpack');
 
 module.exports = {
-  context: SRC_DIR,
-
-  entry: './assets/js/index',
+  entry: ['./assets/js/index.js', './assets/styles/main.scss'],
 
   output: {
-    path: DIST_DIR,
-    filename: 'bundle.js'
-  },
-
-  resolve: {
-    extensions: ['', '.js']
+    filename: 'dist/bundle.js'
   },
 
   module: {
     rules: [
       {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
+      },
+      { // sass / scss loader for webpack
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "sass-loader"
-        })
+        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin("styles.css"),
-  ]
+    new ExtractTextPlugin({
+      filename: 'dist/bundle.css',
+      allChunks: true,
+    }),
+  ],
 };
