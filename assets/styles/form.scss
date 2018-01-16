@@ -1,0 +1,75 @@
+@import "themes";
+
+
+.form-container {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 30px;
+	max-width: 400px;
+	width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form button[type="submit"] {
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+.contact-form {
+	background: $themeColor-Light;
+	padding: 25px;
+}
+
+
+fieldset {
+	border: none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+	width: 100%;
+	border: 1px solid #c9c9c9;
+	background: #fff;
+	margin: 0 0 5px;
+	padding: 10px;
+}
+
+
+.contact-form textarea {
+	height: 100px;
+	max-width: 100%;
+  resize: none;
+}
+
+
+.contact-form button[type="submit"] {
+	cursor: pointer;
+	width: 100%;
+	border: none;
+	background: #0cf;
+	color: #fff;
+	margin: 0 0 5px;
+	padding: 10px;
+}
+
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder
+{
+ color: #888;
+}

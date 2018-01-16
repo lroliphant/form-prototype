@@ -12,6 +12,22 @@ Form prototype
 ## Synopsis
 
 
+## To Run:
+
+* Clone repo to your machine - git clone https://github.com/lroliphant/form-prototype
+* cd into directory
+* `npm install`
+* `npm start`
+
+**To run tests:**
+* `karma start`
+
+**To bundle files:**
+* `npm run build`
+
+**To watch:**
+* `npm run watch`
+
 
 ## Technologies Used
 - JavaScript
@@ -28,17 +44,4 @@ Form prototype
 
 
 ## Still TODO
-
 *
-
-
-
-## To Run:
-
-* Clone repo to your machine - git clone https://github.com/lroliphant/form-prototype
-* cd into directory
-* Run: `npm install`
-* Run: `npm start`
-
-**To run tests:**
-* ...
