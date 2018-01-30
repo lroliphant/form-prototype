@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>contact form</title>
-    <link rel="stylesheet" href=".scss">
+    <link rel="stylesheet" href="bundle.css">
   </head>
   <body>
     <div class="form-container">
@@ -11,18 +11,28 @@
       <form class="contact-form" action="index.html" method="post">
         <fieldset name="details">
           <label for="first-name">First name</label>
-          <input placeholder="first name" id="first-name" type="text" required autofocus>
+          <input name="first-name" type="text" required autofocus>
+
           <label for="last-name">Last name</label>
-          <input placeholder="last name" id="last-name" type="text" required>
+          <input name="last-name" type="text" required>
+
           <label for="email-address">Email</label>
-          <input placeholder="email" id="email-address" type="email" required>
+          <input name="email-address" type="email" required>
+
           <label for="email-address2">Confirm</label>
-          <input placeholder="confirm email" id="email-address2" type="email" required>
+          <input name="email-address2" type="email" required>
+
+          <label for="password">Password</label>
+          <input name="password" type="password" required></input>
+
+          <label for="telephone-number">Telephone number</label>
+          <input name="telephone-number" type="tel" required></input>
         </fieldset>
         <fieldset>
-          <textarea placeholder="Type your Message Here...." required></textarea>
+          <label>Tell us more about your concerns... </label>
+          <textarea name="concerns" minlength="5" maxlength="500" placeholder="e.g. I would like to find out about your products, specifically the dog related ones" required></textarea>
         </fieldset>
-        <button type="submit" >Submit</button>
+        <button type="submit" >Submit my enquiry</button>
       </form>
     </div>
     <script src="bundle.js"></script>
